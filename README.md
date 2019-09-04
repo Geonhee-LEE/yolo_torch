@@ -10,8 +10,8 @@ pytorch 1.1.0
 
 ## Installation
 ##### Clone and install requirements
-    $ git clone https://github.com/eriklindernoren/PyTorch-YOLOv3
-    $ cd PyTorch-YOLOv3/
+    $ git clone https://github.com/Geonhee-LEE/yolo_torch.git
+    $ cd yolo_torch/
     $ sudo pip3 install -r requirements.txt
 
 ##### Download pretrained weights
