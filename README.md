@@ -1,6 +1,13 @@
 # PyTorch-YOLOv3
 A minimal PyTorch implementation of YOLOv3, with support for training, inference and evaluation.
 
+## Environment
+Linux ubuntu 16.04
+Cuda 9.0
+Cudnn 
+python 3.6.2
+pytorch 1.1.0
+
 ## Installation
 ##### Clone and install requirements
     $ git clone https://github.com/eriklindernoren/PyTorch-YOLOv3
