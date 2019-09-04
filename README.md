@@ -94,9 +94,23 @@ $ python3 train.py --data_config config/coco.data  --pretrained_weights weights/
 Total Loss 4.429395
 ---- ETA 0:35:48.821929
 ```
-#### Example (COCO)
+#### Example (Carnumber : https://wingnim.tistory.com/58)
 To train on Carnumber using a Darknet-53 backend pretrained on ImageNet run: 
 ```
 $ python3 trainplate.py --data_config config/plate.data  --pretrained_weights weights/yolov3plate.weight
-$ python3 detect.py --image_folder data/samples/
+$ python3 detect.py --wights_path checkpoint/199.weight --image_folder data/samples/
 ```
+
+#### Tip
+When we're doing train
+Chang in cfg file when you want to change CNN structure.
+Train.py file, change the default path to input data or write additional details when running train.py ( checked as train.py -h )
+
+    Change code (example) :
+    parser.add_argument("--epochs", type=int, default=200, help="number of epochs")
+    parser.add_argument("--batch_size", type=int, default=5, help="size of each image batch")
+    parser.add_argument("--model_config_path", type=str, default="config/yolov3plate.cfg", help="path to model config file")
+    parser.add_argument("--data_config_path", type=str, default="config/plate.data", help="path to data config file")
+    parser.add_argument("--weights_path", type=str, default="weights/yolov3plate.weights", help="path to weights file")
+    parser.add_argument("--class_path", type=str, default="data/plate/plate.names", help="path to class label file")
+
