@@ -101,7 +101,7 @@ $ python3 trainplate.py --data_config config/plate.data  --pretrained_weights we
 $ python3 detect.py --wights_path checkpoint/199.weight --image_folder data/samples/
 ```
 
-## TipA
+## Tip
 How to place labeled data so that it can be used for training.
      
     1. Create and move folder for specific task in path /data
@@ -136,6 +136,19 @@ yolov3.cig
     ignore_thresh = .7
     truth_thresh = 1
     random=1
+
+Data file nees to be modified to fit the cig file.
+(Set number of classes, txt file path, name file path
+    
+    ex) plate.data
+    
+    classes= 10
+    train=data/plate/traindir.txt
+    valid=data/plate/validdir.txt
+    names=data/plate/plate.names
+    backup=backup/
+    eval=plate
+
 
 Train.py file, change the default path to input data or write additional details when running train.py ( checked as train.py -h )
 
