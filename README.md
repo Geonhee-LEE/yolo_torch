@@ -104,8 +104,34 @@ $ python3 detect.py --wights_path checkpoint/199.weight --image_folder data/samp
 ## Tip
 When we're doing train
 Chang in cfg file when you want to change CNN structure.
+
+When you change the number of classes, you must also change the number of fillters in the above Convolution layer.
+
+    number of filters = mask x (classes + 5)
+
+yolov3.cig
+
+    [convolutional]
+    size=1
+    stride=1
+    pad=1
+    filters=45
+    activation=linear
+
+    [yolo]
+    mask = 0,1,2
+    anchors = 10,13, 16,30, 33,23, 30,61, 62,45, 59,119, 116,90, 156,198, 373,326
+    classes=10
+    num=9
+    jitter=.3
+    ignore_thresh = .7
+    truth_thresh = 1
+    random=1
+
 Train.py file, change the default path to input data or write additional details when running train.py ( checked as train.py -h )
+
     Change code (example) :
+    parser.add_argument("--epochs", type=int, default=200, help="number of epochs")
     parser.add_argument("--model_config_path", type=str, default="config/yolov3plate.cfg", help="path to model config file")
     parser.add_argument("--data_config_path", type=str, default="config/plate.data", help="path to data config file")
     parser.add_argument("--weights_path", type=str, default="weights/yolov3plate.weights", help="path to weights file")
@@ -113,5 +139,7 @@ Train.py file, change the default path to input data or write additional details
 
 Change the default path_size to a smaller size in the event of a CUDA low memory issue.
 
-    parser.add_argument("--epochs", type=int, default=200, help="number of epochs")
     parser.add_argument("--batch_size", type=int, default=5, help="size of each image batch")
+    
+
+
