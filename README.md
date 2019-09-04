@@ -101,7 +101,16 @@ $ python3 trainplate.py --data_config config/plate.data  --pretrained_weights we
 $ python3 detect.py --wights_path checkpoint/199.weight --image_folder data/samples/
 ```
 
-## Tip
+## TipA
+How to place labeled data so that it can be used for training.
+     
+    1. Create and move folder for specific task in path /data
+    2. Create images folder, labels folder, xxxx.names, train.txt, valid.txt
+    3. Place input data in the images folder
+    4. Place label txt data in labels folder
+    5. Open the A file and fill in the class.txt content created when labelling.
+    6. In train.txt, enter the path to the input image file
+    
 When we're doing train
 Chang in cfg file when you want to change CNN structure.
 
@@ -141,5 +150,4 @@ Change the default path_size to a smaller size in the event of a CUDA low memory
 
     parser.add_argument("--batch_size", type=int, default=5, help="size of each image batch")
     
-
-
+Image files should use 'jpg' and 'png' files.
