@@ -94,4 +94,9 @@ $ python3 train.py --data_config config/coco.data  --pretrained_weights weights/
 Total Loss 4.429395
 ---- ETA 0:35:48.821929
 ```
-
+#### Example (COCO)
+To train on Carnumber using a Darknet-53 backend pretrained on ImageNet run: 
+```
+$ python3 trainplate.py --data_config config/plate.data  --pretrained_weights weights/yolov3plate.weight
+$ python3 detect.py --image_folder data/samples/
+```
