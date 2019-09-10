@@ -18,22 +18,22 @@ conda install pytorch=1.1.0 cuda90 -c pytorch
 ```
 
 ##### Clone and install requirements
-    $ git clone https://github.com/Geonhee-LEE/yolo_torch.git
-    $ cd yolo_torch/
-    $ sudo pip3 install -r requirements.txt
+    git clone https://github.com/Geonhee-LEE/yolo_torch.git
+    cd yolo_torch/
+    sudo pip3 install -r requirements.txt
 
 ##### Download pretrained weights
-    $ cd weights/
-    $ bash download_weights.sh
+    cd weights/
+    bash download_weights.sh
 
 ##### Download COCO
-    $ cd data/
-    $ bash get_coco_dataset.sh
+    cd data/
+    bash get_coco_dataset.sh
     
 ## Test
 Evaluates the model on COCO test.
 
-    $ python3 test.py --weights_path weights/yolov3.weights
+    python3 test.py --weights_path weights/yolov3.weights
 
 | Model                   | mAP (min. 50 IoU) |
 | ----------------------- |:-----------------:|
@@ -75,7 +75,7 @@ $ train.py [-h] [--epochs EPOCHS] [--batch_size BATCH_SIZE]
 #### Example (COCO)
 To train on COCO using a Darknet-53 backend pretrained on ImageNet run: 
 ```
-$ python3 train.py --data_config config/coco.data  --pretrained_weights weights/darknet53.conv.74
+python3 train.py --data_config config/coco.data  --pretrained_weights weights/darknet53.conv.74
 ```
 
 #### Training log
@@ -105,8 +105,8 @@ Total Loss 4.429395
 #### Example (Carnumber : https://wingnim.tistory.com/58)
 To train on Carnumber using a Darknet-53 backend pretrained on ImageNet run: 
 ```
-$ python3 trainplate.py --data_config config/plate.data  --pretrained_weights weights/yolov3plate.weight
-$ python3 detect.py --wights_path checkpoint/199.weight --image_folder data/samples/
+python3 trainplate.py --data_config config/plate.data  --pretrained_weights weights/yolov3plate.weight
+python3 detect.py --wights_path checkpoint/199.weight --image_folder data/samples/
 ```
 
 ## Tip
