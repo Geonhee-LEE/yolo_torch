@@ -2,13 +2,21 @@
 A minimal PyTorch implementation of YOLOv3, with support for training, inference and evaluation.
 
 ## Environment
-    Linux ubuntu 16.04,
-    Cuda 9.0,
-    Cudnn ,
-    python 3.6.2,
-    pytorch 1.1.0
+    Linux ubuntu 16.04 lts,
+    CUDA 9.0,
+    CuDNN 7.0,
+    Python 3.6.2,
+    Pytorch 1.1.0
 
 ## Installation
+
+### Using Conda
+
+```
+conda create -n env_name python = 3.6.2 
+conda install pytorch=1.1.0 cuda90 -c pytorch
+```
+
 ##### Clone and install requirements
     $ git clone https://github.com/Geonhee-LEE/yolo_torch.git
     $ cd yolo_torch/
