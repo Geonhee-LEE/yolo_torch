@@ -105,8 +105,8 @@ Total Loss 4.429395
 #### Example (Carnumber : https://wingnim.tistory.com/58)
 To train on Carnumber using a Darknet-53 backend pretrained on ImageNet run: 
 ```
-python3 trainplate.py --data_config config/plate.data  --pretrained_weights weights/yolov3plate.weight
-python3 detect.py --wights_path checkpoint/199.weight --image_folder data/samples/
+python3 trainplate.py --data_config config/plate.data  --pretrained_weights weights/yolov3plate.weights
+python3 detect.py --weights_path checkpoints/yolov3_ckpt_299.pth --image_folder data/samples/
 ```
 
 ## Tip
